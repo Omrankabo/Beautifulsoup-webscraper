@@ -4,7 +4,7 @@ Scrapes book data from books.toscrape.com and uploads it to Google Sheets.
 
 ## Features
 - Scrapes all books with pagination
-- Uploads only new titles (no duplicates)
+- Uploads only new titles (no duplicates) (not yet)
 - Modular code structure (ready for growth)
 
 ## To Use

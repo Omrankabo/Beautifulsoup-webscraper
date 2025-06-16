@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from config import BASE_URL
 import pandas as pd
 import time
+from sheet_writer import sheet_writer
 
 # escaping characters for the terminal indecators
 CLR = '\033[02J'
@@ -49,7 +50,8 @@ def fetcher(page):
 
 def scraper():
     all_books = []
-    print(f"{CLR}Starting to fetch data...")
+    print(CLR)
+    print(f"Starting to fetch data...{CLR_RETURN}")
     for page in range(1,51):
         #delay between pages
         time.sleep(1.5)
@@ -57,9 +59,11 @@ def scraper():
         
     print(f"Done fetching data... ✅ {CLR_RETURN}")
     df = pd.DataFrame(all_books)
-    df.to_csv("books.csv", index=False, encoding="utf-8")
+    # df.to_csv("books.csv", index=False, encoding="utf-8")
 
-    print("✅ saved to books.csv")
+    # print("✅ saved to books.csv")
+    
+    sheet_writer(df)
     exit()
     
     
