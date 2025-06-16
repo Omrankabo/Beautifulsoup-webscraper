@@ -1,7 +1,16 @@
-# Simple webscraper
-using beautifualsoup to scrap [boosk.toscrape](https://books.toscrape.com/) for the books informantions.
+# Book Scraper — Base Version
 
+Scrapes book data from books.toscrape.com and uploads it to Google Sheets.
 
-## To improve later
-    - Adding filter to what is in stock and what is not
-    - adding a functionallity to bypass the pagination 
+## Features
+- Scrapes all books with pagination
+- Uploads only new titles (no duplicates)
+- Modular code structure (ready for growth)
+
+## To Use
+1. Set up `credentials.json` for your service account
+2. Create a Google Sheet and share it with the service account email
+3. Install requirements:
+   ```bash
+   pip install -r requirements.txt
+   playwright install
